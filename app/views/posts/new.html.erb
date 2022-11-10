@@ -5,8 +5,13 @@
 <% end %>
 
 <%= form_with model: @post do |form| %>
-  <%= form.label :body, "Your Post:" %>
+  <%= form.label :title, "Title:" %>
+  <%= form.text_field :title %>
+
+  <%= form.label :body, "Content:" %>
   <%= form.text_area :body %>
 
   <%= form.submit "Submit"%>
 <% end %>
+
+<p>You are signed-in as user # <%= @post.user_id %></p>
