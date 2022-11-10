@@ -14,4 +14,5 @@
   <%= form.submit "Submit"%>
 <% end %>
 
-<p>You are signed-in as user # <%= @post.user_id %></p>
+<p>You are signed in as "<%= @post.user.name %>".</p>
+<%= button_to "Logout", destroy_user_session_path, method: :delete  %>
