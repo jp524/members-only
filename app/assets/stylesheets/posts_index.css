@@ -31,5 +31,9 @@
 .index .content .item .author {
   font-style: italic;
   margin-bottom: 5px;
-  justify-self: end;
+}
+
+.index .content .item p {
+  text-overflow: ellipsis;
+  overflow: scroll;
 }
