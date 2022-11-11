@@ -1,0 +1,24 @@
+.users-new {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.users-new .content {
+  padding: 20px;
+  text-align: center;
+
+}
+
+.users-new .content h1 {
+  margin-bottom: 10px;
+}
+
+.users-new .content input[type="submit"] {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.users-new .content a {
+  color: #059669;
+}

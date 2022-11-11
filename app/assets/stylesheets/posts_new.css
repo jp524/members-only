@@ -12,17 +12,6 @@
   margin-bottom: 10px;
 }
 
-.new .content form {
-  display: flex;
-  flex-direction: column;
-  background-color: #f0fdfa;
-  padding: 20px;
-  border: solid 1px lightgrey;
-  border-radius: 8px;
-  box-shadow: 0 3px 3px lightgrey;
-  margin-top: 20px;
-}
-
 .new .content input[type="text"] {
   margin-bottom: 14px;
 }

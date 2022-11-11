@@ -4,6 +4,7 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -33,6 +34,7 @@
   background-color: #f0fdfa;
 }
 
+/* FOOTER */
 .footer {
   padding: 10px;
   background-color: #14b8a6;
@@ -41,4 +43,16 @@
 .footer p {
   color: #f0fdfa;
   text-align: center;
+}
+
+/* FORM */
+.content form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0fdfa;
+  padding: 20px;
+  border: solid 1px lightgrey;
+  border-radius: 8px;
+  box-shadow: 0 3px 3px lightgrey;
+  margin: 20px 0;
 }
