@@ -1,4 +1,8 @@
 <%= stylesheet_link_tag 'posts_index.css' %>
+<%= stylesheet_link_tag 'application',
+'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap',
+ media: 'all', 'data-turbolinks-track' => true %>
+
 
 <div class="index">
   <div class="header">
@@ -16,10 +20,10 @@
     <% @posts.each do |post| %>
       <div class="item">
         <p class="title"><%= post.title %></p>
-        <% if user_signed_in? %>
-          <p class="author">Written by: <%= post.user.name %></p>
-        <% end %>
         <p class="body"><%= post.body %></p>
+        <% if user_signed_in? %>
+          <p class="author">Author: <%= post.user.name %></p>
+        <% end %>
         <br>
       </div>
     <% end %>
