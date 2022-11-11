@@ -1,16 +1,31 @@
-<% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <p><%= post.body %></p>
-  <% if user_signed_in? %>
-    <p>Written by: <%= post.user.name %></p>
-  <% end %>
-  <br>
-<% end %>
+<%= stylesheet_link_tag 'posts_index.css' %>
 
-<%= button_to "Write a New Post", new_post_path, method: :get%>
-<% if !user_signed_in? %>
-  <%= button_to "Log in", new_user_session_path, method: :get %>
-<% end %>
-<% if user_signed_in? %>
-  <%= button_to "Log out", destroy_user_session_path, method: :delete  %>
-<% end %>
+<div class="index">
+  <div class="header">
+    <%= button_to "Write a New Post", new_post_path, method: :get %>
+    <p>Odin Clubhouse</p>
+    <% if !user_signed_in? %>
+      <%= button_to "Log in", new_user_session_path, method: :get %>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete  %>
+    <% end %>
+  </div>
+
+  <div class="content">
+    <% @posts.each do |post| %>
+      <div class="item">
+        <p class="title"><%= post.title %></p>
+        <% if user_signed_in? %>
+          <p class="author">Written by: <%= post.user.name %></p>
+        <% end %>
+        <p class="body"><%= post.body %></p>
+        <br>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="footer">
+    <p>Copyright © JP 2022</p>
+  </div>
+</div>
